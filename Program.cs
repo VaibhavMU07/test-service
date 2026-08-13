@@ -58,10 +58,11 @@ app.MapGet("/", async () =>
                     ";
             }
         }
-        catch
+        catch (Exception ex)
         {
             databaseStatus = "Connection Failed";
             databaseClass = "danger";
+            Console.WriteLine("DATABASE ERROR: " + ex);
         }
     }
 
