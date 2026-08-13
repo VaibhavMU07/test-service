@@ -35,27 +35,27 @@ app.MapGet("/", async () =>
 
             while (await reader.ReadAsync())
             {
-                customersHtml += $"""
+                customersHtml += $@"
                     <tr>
                         <td>
-                            <div class="user-id">
-                                {reader["Id"]}
+                            <div class=""user-id"">
+                                {reader.GetValue(0)}
                             </div>
                         </td>
 
                         <td>
-                            <div class="user-name">
-                                {reader["Name"]}
+                            <div class=""user-name"">
+                                {reader.GetValue(1)}
                             </div>
                         </td>
 
                         <td>
-                            <span class="email">
-                                {reader["Email"]}
+                            <span class=""email"">
+                                {reader.GetValue(2)}
                             </span>
                         </td>
                     </tr>
-                    """;
+                    ";
             }
         }
         catch
@@ -65,17 +65,17 @@ app.MapGet("/", async () =>
         }
     }
 
-    var html = $$"""
+    var html = @"
 <!DOCTYPE html>
 
 <html>
 
 <head>
 
-    <meta charset="UTF-8">
+    <meta charset=""UTF-8"">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name=""viewport""
+          content=""width=device-width, initial-scale=1.0"">
 
     <title>Test Service | Azure Lab</title>
 
@@ -91,7 +91,7 @@ app.MapGet("/", async () =>
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
-                "Segoe UI",
+                ""Segoe UI"",
                 Roboto,
                 Arial,
                 sans-serif;
@@ -510,21 +510,21 @@ app.MapGet("/", async () =>
 
 <!-- NAVIGATION -->
 
-<nav class="navbar">
+<nav class=""navbar"">
 
-    <div class="brand">
+    <div class=""brand"">
 
-        <div class="brand-icon">
+        <div class=""brand-icon"">
             TS
         </div>
 
         <div>
 
-            <div class="brand-name">
+            <div class=""brand-name"">
                 Test Service
             </div>
 
-            <div class="brand-subtitle">
+            <div class=""brand-subtitle"">
                 Azure Application Lab
             </div>
 
@@ -533,7 +533,7 @@ app.MapGet("/", async () =>
     </div>
 
 
-    <div class="environment">
+    <div class=""environment"">
         LAB ENVIRONMENT
     </div>
 
@@ -542,48 +542,48 @@ app.MapGet("/", async () =>
 
 <!-- MAIN -->
 
-<main class="container">
+<main class=""container"">
 
 
-    <h1 class="page-title">
+    <h1 class=""page-title"">
         Application Dashboard
     </h1>
 
-    <p class="page-description">
+    <p class=""page-description"">
         Azure App Service backup, restore and migration lab
     </p>
 
 
     <!-- STATUS CARDS -->
 
-    <div class="cards">
+    <div class=""cards"">
 
 
         <!-- APPLICATION -->
 
-        <div class="card">
+        <div class=""card"">
 
-            <div class="card-header">
+            <div class=""card-header"">
 
-                <div class="card-title">
+                <div class=""card-title"">
                     Application
                 </div>
 
-                <div class="icon icon-blue">
+                <div class=""icon icon-blue"">
                     ⚡
                 </div>
 
             </div>
 
 
-            <div class="card-value">
+            <div class=""card-value"">
                 Healthy
             </div>
 
 
-            <div class="status success">
+            <div class=""status success"">
 
-                <span class="status-dot"></span>
+                <span class=""status-dot""></span>
 
                 Running
 
@@ -594,29 +594,29 @@ app.MapGet("/", async () =>
 
         <!-- DATABASE -->
 
-        <div class="card">
+        <div class=""card"">
 
-            <div class="card-header">
+            <div class=""card-header"">
 
-                <div class="card-title">
+                <div class=""card-title"">
                     Database
                 </div>
 
-                <div class="icon icon-green">
+                <div class=""icon icon-green"">
                     DB
                 </div>
 
             </div>
 
 
-            <div class="card-value">
+            <div class=""card-value"">
                 {{databaseStatus}}
             </div>
 
 
-            <div class="status {{databaseClass}}">
+            <div class=""status {{databaseClass}}"">
 
-                <span class="status-dot"></span>
+                <span class=""status-dot""></span>
 
                 Azure SQL
 
@@ -627,29 +627,29 @@ app.MapGet("/", async () =>
 
         <!-- ENVIRONMENT -->
 
-        <div class="card">
+        <div class=""card"">
 
-            <div class="card-header">
+            <div class=""card-header"">
 
-                <div class="card-title">
+                <div class=""card-title"">
                     Environment
                 </div>
 
-                <div class="icon icon-purple">
+                <div class=""icon icon-purple"">
                     ☁
                 </div>
 
             </div>
 
 
-            <div class="card-value">
+            <div class=""card-value"">
                 LAB
             </div>
 
 
-            <div class="status success">
+            <div class=""status success"">
 
-                <span class="status-dot"></span>
+                <span class=""status-dot""></span>
 
                 Test Environment
 
@@ -663,19 +663,19 @@ app.MapGet("/", async () =>
 
     <!-- CUSTOMERS -->
 
-    <div class="section">
+    <div class=""section"">
 
 
-        <div class="section-header">
+        <div class=""section-header"">
 
-            <div class="section-title">
+            <div class=""section-title"">
                 Customers
             </div>
 
             <a
-                class="view-api"
-                href="/health"
-                target="_blank">
+                class=""view-api""
+                href=""/health""
+                target=""_blank"">
 
                 View Health API →
 
@@ -684,7 +684,7 @@ app.MapGet("/", async () =>
         </div>
 
 
-        <div class="table-container">
+        <div class=""table-container"">
 
 
             <table>
@@ -727,66 +727,66 @@ app.MapGet("/", async () =>
 
     <!-- ENVIRONMENT INFORMATION -->
 
-    <div class="section">
+    <div class=""section"">
 
 
-        <div class="section-title">
+        <div class=""section-title"">
             Environment Information
         </div>
 
 
-        <div class="card" style="margin-top:15px">
+        <div class=""card"" style=""margin-top:15px"">
 
 
-            <div class="info-grid">
+            <div class=""info-grid"">
 
 
-                <div class="info-item">
+                <div class=""info-item"">
 
-                    <div class="info-label">
+                    <div class=""info-label"">
                         Platform
                     </div>
 
-                    <div class="info-value">
+                    <div class=""info-value"">
                         Linux
                     </div>
 
                 </div>
 
 
-                <div class="info-item">
+                <div class=""info-item"">
 
-                    <div class="info-label">
+                    <div class=""info-label"">
                         Runtime
                     </div>
 
-                    <div class="info-value">
+                    <div class=""info-value"">
                         .NET
                     </div>
 
                 </div>
 
 
-                <div class="info-item">
+                <div class=""info-item"">
 
-                    <div class="info-label">
+                    <div class=""info-label"">
                         Hosting
                     </div>
 
-                    <div class="info-value">
+                    <div class=""info-value"">
                         Azure App Service
                     </div>
 
                 </div>
 
 
-                <div class="info-item">
+                <div class=""info-item"">
 
-                    <div class="info-label">
+                    <div class=""info-label"">
                         Deployment
                     </div>
 
-                    <div class="info-value">
+                    <div class=""info-value"">
                         GitHub
                     </div>
 
@@ -814,8 +814,11 @@ app.MapGet("/", async () =>
 
 </body>
 
-</html>
-""";
+</html>";
+
+    html = html.Replace("{{databaseStatus}}", databaseStatus)
+               .Replace("{{databaseClass}}", databaseClass)
+               .Replace("{{customersHtml}}", customersHtml);
 
     return Results.Content(
         html,
